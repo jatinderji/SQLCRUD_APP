@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<!--         For Insert   -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5D6D0"
+                    android:text="Insert into SQLite"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/txtName"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:hint="Enter Customer Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtAddress"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:hint="Enter Customer Address"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtPhone"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:hint="Enter Phone Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnInsert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:shadowColor="#8D8B8B"
+                    android:shadowRadius="2"
+                    android:text="Insert"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000" />
+<!--         For View   -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5D6D0"
+                    android:text="View from SQLite"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/txtViewCusId"
+                    android:inputType="number"
+                    android:layout_margin="5dp"
+                    android:hint="Enter Customer ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtViewName"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:textColor="#000000"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtViewAddress"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:enabled="false"
+                    android:textColor="#000000"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtViewPhone"
+                    android:layout_margin="5dp"
+                    android:enabled="false"
+                    android:textColor="#000000"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:text="View"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000" />
+<!--         For Update   -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5D6D0"
+                    android:text="Update from SQLite"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/txtUpdateCusId"
+                    android:inputType="number"
+                    android:layout_margin="5dp"
+                    android:hint="Enter Customer ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtUpdateName"
+                    android:inputType="text"
+                    android:hint="Enter New Name"
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtUpdateAddress"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:hint="Enter New Address"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/txtUpdatePhone"
+                    android:layout_margin="5dp"
+                    android:hint="Enter New Phone No."
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:text="Update"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000" />
+            <!--         For Delete   -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5D6D0"
+                    android:text="Delete from SQLite"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/txtDelCusId"
+                    android:inputType="number"
+                    android:layout_margin="5dp"
+                    android:hint="Enter Customer ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:text="Delete"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#000000" />
+            <!--         For View All   -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F5D6D0"
+                    android:text="View All from SQLite"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:layout_margin="20dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btnViewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2sp"
+                    android:text="View All"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
